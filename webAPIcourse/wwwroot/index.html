@@ -15,7 +15,7 @@
 
 <script>
     async function fetchRandomName() {
-        const response = await fetch('/api/Name/RndName?count=1');
+        const response = await fetch('/api/Name/RndName?count=1&&ipAddress=192.168.178.90');
         const html = await response.text();
         document.getElementById('nameContainer').innerHTML = html;
     }

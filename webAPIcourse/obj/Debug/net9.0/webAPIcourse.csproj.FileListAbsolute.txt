@@ -52,4 +52,4 @@ C:\Users\feder\RiderProjects\webAPIcourse\webAPIcourse\bin\Debug\net9.0\Microsof
 C:\Users\feder\RiderProjects\webAPIcourse\webAPIcourse\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\feder\RiderProjects\webAPIcourse\webAPIcourse\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\feder\RiderProjects\webAPIcourse\webAPIcourse\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\feder\RiderProjects\webAPIcourse\webAPIcourse\obj\Debug\net9.0\compressed\2zdmykn08s-91q5b3nsmu.gz
+C:\Users\feder\RiderProjects\webAPIcourse\webAPIcourse\obj\Debug\net9.0\compressed\2zdmykn08s-jyczhl7ble.gz

@@ -9,7 +9,7 @@ public class NameService
     public NameService(IConfiguration configuration)
     {
         _configuration = configuration;
-        _namesFilePath = Path.Combine(AppContext.BaseDirectory, _configuration["CustomSettings:NamesFilePath1"]);
+        _namesFilePath = Path.Combine(AppContext.BaseDirectory, _configuration["CustomSettings:Names"]);
         LoadNames();
     }
 
@@ -32,7 +32,7 @@ public class NameService
         string ipResponse = "";
         try
         {
-            ipResponse = await client.GetStringAsync(ipInfoUrl);
+           //ipResponse = await client.GetStringAsync(ipInfoUrl);
         }
         catch (Exception ex)
         {
@@ -91,8 +91,8 @@ public class NameService
     <div>{string.Join("<br>", selectedNames)}</div>
 </body>
 </html>";
+        }
     }
-}
     
 
     
