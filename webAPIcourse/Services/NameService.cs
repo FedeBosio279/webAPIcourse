@@ -23,36 +23,39 @@ public class NameService
         }
     }
 
-    public async Task<string> GetRandomNameAsync(int count, string ipAddress)
+    public async Task<object> GetRandomNameDataAsync(int count, string ipAddress)
     {
         using var client = new HttpClient();
         var token = _configuration["Ip:IpInfoToken"];
         var ipInfoUrl = $"https://ipinfo.io/{ipAddress}/json?token={token}";
-
-        string ipResponse = "";
-        try
+        
+        HttpResponseMessage response = await client.GetAsync(ipInfoUrl);
+        if (!response.IsSuccessStatusCode)
         {
-           //ipResponse = await client.GetStringAsync(ipInfoUrl);
+            return new { error = $"Unable to retrieve IP info. Status Code: {response.StatusCode}" };
         }
-        catch (Exception ex)
-        {
-            return $"<html><body><h1>Error: Unable to retrieve IP info. {ex.Message}</h1></body></html>";
-        }
-
+    
+        string ipResponse = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("IP Response: " + ipResponse);
+        
         Dictionary<string, string> ipData;
         try
         {
             ipData = JsonSerializer.Deserialize<Dictionary<string, string>>(ipResponse);
+            if (ipData == null || !ipData.ContainsKey("country") || !ipData.ContainsKey("timezone"))
+            {
+                return new { error = "Missing required fields in IP info response." };
+            }
         }
-        catch
+        catch (JsonException ex)
         {
-            return "<html><body><h1>Error: Unable to parse IP info response.</h1></body></html>";
+            return new { error = $"Unable to parse IP info response. {ex.Message}" };
         }
-
-        var country = ipData?["country"] ?? "Unknown";
-        var timezone = ipData?["timezone"] ?? "Europe/Rome";
-
+    
+        var country = ipData?.GetValueOrDefault("country", "Unknown");
+        var timezone = ipData?.GetValueOrDefault("timezone", "Europe/Rome");
         var utcNow = DateTime.UtcNow;
+    
         TimeZoneInfo timeZoneInfo;
         try
         {
@@ -62,37 +65,24 @@ public class NameService
         {
             timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("UTC");
         }
-
+    
         var localTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, timeZoneInfo);
-
         var rnd = new Random();
         var selectedNames = Enumerable.Range(0, count)
-            .Select(_ => _names[rnd.Next(_names.Count)])
-            .ToList();
-
-        return $@"
-<html>
-<head>
-    <title>Nomi Casuali</title>
-    <style>
-        body {{
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: white;
-        }}
-        h1 {{ animation: rainbow 5s linear infinite; }}
-    </style>
-</head>
-<body>
-    <h1>Nomi Casuali</h1>
-    <p>Ora locale: {localTime.ToShortTimeString()} ({localTime.ToShortDateString()})</p>
-    <p>Paese: {country}</p>
-    <p>Fuso orario: {timezone}</p>
-    <div>{string.Join("<br>", selectedNames)}</div>
-</body>
-</html>";
-        }
+                                      .Select(_ => _names[rnd.Next(_names.Count)])
+                                      .ToList();
+    
+        // Ritorna i dati come oggetto JSON
+        return new {
+            country,
+            timezone,
+            localTime = localTime.ToString("HH:mm:ss"),
+            localDate = localTime.ToShortDateString(),
+            names = selectedNames
+        };
     }
+    }
+
     
 
     

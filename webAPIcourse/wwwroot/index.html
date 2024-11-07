@@ -2,12 +2,15 @@
 <html>
 <head>
     <title>Nomi Casuali</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-    </style>
+    <link rel="stylesheet" href="/wwwroot/css/styles.css">
 </head>
 <body>
 <h1>Nomi Casuali</h1>
+<div id="info">
+    <p>Ora locale: <span id="localTime"></span> (<span id="localDate"></span>)</p>
+    <p>Paese: <span id="country"></span></p>
+    <p>Fuso orario: <span id="timezone"></span></p>
+</div>
 <div id="nameContainer">
     <p>Clicca per ottenere un nuovo nome casuale</p>
 </div>
@@ -15,9 +18,20 @@
 
 <script>
     async function fetchRandomName() {
-        const response = await fetch('/api/Name/RndName?count=1&&ipAddress=192.168.178.90');
-        const html = await response.text();
-        document.getElementById('nameContainer').innerHTML = html;
+        const response = await fetch('/api/Name/RndName?count=1');
+        const data = await response.json();
+
+        if (data.error) {
+            document.getElementById('nameContainer').innerHTML = `<p>Error: ${data.error}</p>`;
+            return;
+        }
+
+        // Aggiorna il contenuto della pagina con i dati JSON
+        document.getElementById('localTime').textContent = data.localTime;
+        document.getElementById('localDate').textContent = data.localDate;
+        document.getElementById('country').textContent = data.country;
+        document.getElementById('timezone').textContent = data.timezone;
+        document.getElementById('nameContainer').innerHTML = data.names.join('<br>');
     }
 </script>
 </body>
