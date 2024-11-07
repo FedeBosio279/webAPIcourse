@@ -1,12 +1,362 @@
 {
   "Version": 1,
-  "Hash": "mYMoMEcGuQplXl+Rx2DnPXf5gZUThTR32FdcMhEZqEo=",
+  "Hash": "J1sHuQ6HqgfMLcMREbYQtw8w0Qh6t2YElSZNsvabvhQ=",
   "Source": "webAPIcourse",
   "BasePath": "_content/webAPIcourse",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "webAPIcourse\\wwwroot",
+      "Source": "webAPIcourse",
+      "ContentRoot": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\wwwroot\\",
+      "BasePath": "_content/webAPIcourse",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\obj\\Debug\\net9.0\\compressed\\2zdmykn08s-91q5b3nsmu.gz",
+      "SourceId": "webAPIcourse",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/webAPIcourse",
+      "RelativePath": "index#[.{fingerprint=91q5b3nsmu}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\wwwroot\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "aihdjmqho0",
+      "Integrity": "4oQ8o7CFYHEbrGO+ITcn/HfNYtLzBjU44vVco1l89Hs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\wwwroot\\index.html",
+      "SourceId": "webAPIcourse",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\wwwroot\\",
+      "BasePath": "_content/webAPIcourse",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "91q5b3nsmu",
+      "Integrity": "86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.91q5b3nsmu.html",
+      "AssetFile": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\obj\\Debug\\net9.0\\compressed\\2zdmykn08s-91q5b3nsmu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0,002762430939"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "361"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4oQ8o7CFYHEbrGO+ITcn/HfNYtLzBjU44vVco1l89Hs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 07 Nov 2024 18:02:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91q5b3nsmu"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk="
+        }
+      ]
+    },
+    {
+      "Route": "index.91q5b3nsmu.html",
+      "AssetFile": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 07 Nov 2024 18:02:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91q5b3nsmu"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk="
+        }
+      ]
+    },
+    {
+      "Route": "index.91q5b3nsmu.html.gz",
+      "AssetFile": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\obj\\Debug\\net9.0\\compressed\\2zdmykn08s-91q5b3nsmu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "361"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4oQ8o7CFYHEbrGO+ITcn/HfNYtLzBjU44vVco1l89Hs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 07 Nov 2024 18:02:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91q5b3nsmu"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4oQ8o7CFYHEbrGO+ITcn/HfNYtLzBjU44vVco1l89Hs="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\obj\\Debug\\net9.0\\compressed\\2zdmykn08s-91q5b3nsmu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0,002762430939"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "361"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4oQ8o7CFYHEbrGO+ITcn/HfNYtLzBjU44vVco1l89Hs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 07 Nov 2024 18:02:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 07 Nov 2024 18:02:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-86XqX2cTm2fD2gUlv868dksazPARQVTdlskhVLQABWk="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "C:\\Users\\feder\\RiderProjects\\webAPIcourse\\webAPIcourse\\obj\\Debug\\net9.0\\compressed\\2zdmykn08s-91q5b3nsmu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "361"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4oQ8o7CFYHEbrGO+ITcn/HfNYtLzBjU44vVco1l89Hs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 07 Nov 2024 18:02:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4oQ8o7CFYHEbrGO+ITcn/HfNYtLzBjU44vVco1l89Hs="
+        }
+      ]
+    }
+  ]
 }

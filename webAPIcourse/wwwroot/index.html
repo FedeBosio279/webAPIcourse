@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nomi Casuali</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+<h1>Nomi Casuali</h1>
+<div id="nameContainer">
+    <p>Clicca per ottenere un nuovo nome casuale</p>
+</div>
+<button onclick="fetchRandomName()">Nuovo Nome</button>
+
+<script>
+    async function fetchRandomName() {
+        const response = await fetch('/api/Name/RndName?count=1');
+        const html = await response.text();
+        document.getElementById('nameContainer').innerHTML = html;
+    }
+</script>
+</body>
+</html>
