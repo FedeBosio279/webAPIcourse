@@ -12,16 +12,16 @@ public class NameController : ControllerBase
     }
 
     [HttpGet("RndName")]
-    public async Task<IActionResult> GetRandomName(int? count = 1, string ipAddress = null)
-    {
-        // Se ipAddress è nullo, usa l'IP remoto dell'utente dalla richiesta
-        ipAddress = ipAddress ?? HttpContext.Connection.RemoteIpAddress?.ToString();
+public async Task<IActionResult> GetRandomName(int? count = 1, string ipAddress = null)
+{
+    // Se ipAddress è nullo, usa l'IP remoto dell'utente dalla richiesta
+    ipAddress = ipAddress ?? HttpContext.Connection.RemoteIpAddress?.ToString();
     
-        // Passa ipAddress al metodo del servizio
-        var result = await _nameService.GetRandomNameAsync(count.Value, ipAddress);
+    // Passa ipAddress al metodo del servizio
+    var result = await _nameService.GetRandomNameAsync(count.Value, ipAddress);
     
-        return Content(result, "text/html");
-    }
+    return Content(result, "text/html");
+}
 
 }
 /*HttpGet]
